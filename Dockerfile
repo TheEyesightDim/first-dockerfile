@@ -8,8 +8,8 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /pod-gohttp
+RUN go build -o /gohttp
 
 EXPOSE 8888
 
-CMD ["/pod-gohttp"]
+CMD ["/gohttp"]
