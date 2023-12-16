@@ -1,0 +1,23 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-4.8.2
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-12-15T17:50:10Z"
+  labels:
+    app: pod-example
+  name: pod-example
+spec:
+  containers:
+  - env:
+    - name: TERM
+      value: xterm
+    image: localhost/containedortho/example-gohttp:latest
+    name: quizzicalbhabha
+    ports:
+    - containerPort: 8888
+      hostPort: 8888
+    tty: true
+
